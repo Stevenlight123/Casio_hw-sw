@@ -1,0 +1,1874 @@
+16:17:15 **** Build of project casio_projekt_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:17:49 **** Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19352	   1144	  22568	  43064	   a838	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+16:18:45 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.c.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.c.d" -MT"src/interrupt_counter_tut_2D_fixed.c.o" -o "src/interrupt_counter_tut_2D_fixed.c.o" "../src/interrupt_counter_tut_2D_fixed.c.c"
+In file included from ../src/interrupt_counter_tut_2D_fixed.c.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.c.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.c.o: In function `main':
+C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c.c:174: multiple definition of `main'
+./src/helloworld.o:C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/helloworld.c:54: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+16:19:21 **** Clean-only build of configuration Debug for project casio_projekt ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.c.o ./src/platform.o  ./src/helloworld.d ./src/interrupt_counter_tut_2D_fixed.c.d ./src/platform.d  casio_projekt.elf.size  casio_projekt.elf
+' '
+16:19:22 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.d" -MT"src/interrupt_counter_tut_2D_fixed.o" -o "src/interrupt_counter_tut_2D_fixed.o" "../src/interrupt_counter_tut_2D_fixed.c"
+In file included from ../src/interrupt_counter_tut_2D_fixed.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/helloworld.o:C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/helloworld.c:54: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+16:19:41 **** Clean-only build of configuration Debug for project casio_projekt ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o  ./src/helloworld.d ./src/interrupt_counter_tut_2D_fixed.d ./src/platform.d  casio_projekt.elf.size  casio_projekt.elf
+' '
+16:19:41 **** Clean-only build of project casio_projekt_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+16:19:43 **** Build of project casio_projekt_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:20:15 **** Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.d" -MT"src/interrupt_counter_tut_2D_fixed.o" -o "src/interrupt_counter_tut_2D_fixed.o" "../src/interrupt_counter_tut_2D_fixed.c"
+In file included from ../src/interrupt_counter_tut_2D_fixed.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/helloworld.o:C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/helloworld.c:54: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+16:21:09 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/helloworld.o:C:\Users\kirst\Documents\HWSF\Casio\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/helloworld.c:54: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+16:22:29 **** Clean-only build of configuration Debug for project casio_projekt ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o  ./src/helloworld.d ./src/interrupt_counter_tut_2D_fixed.d ./src/platform.d  casio_projekt.elf.size  casio_projekt.elf
+' '
+16:22:30 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.d" -MT"src/interrupt_counter_tut_2D_fixed.o" -o "src/interrupt_counter_tut_2D_fixed.o" "../src/interrupt_counter_tut_2D_fixed.c"
+In file included from ../src/interrupt_counter_tut_2D_fixed.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84436	   4216	  23424	 112076	  1b5cc	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+16:22:41 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:19:01 **** Auto Build of project casio_projekt_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+17:19:34 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.d" -MT"src/interrupt_counter_tut_2D_fixed.o" -o "src/interrupt_counter_tut_2D_fixed.o" "../src/interrupt_counter_tut_2D_fixed.c"
+In file included from ../src/interrupt_counter_tut_2D_fixed.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84436	   4216	  23424	 112076	  1b5cc	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+17:21:01 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c:34:10: fatal error: clock.h: No such file or directory
+ #include "clock.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/Casio_main.o] Error 1
+17:21:30 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'BTN_Intr_Handler':
+../src/Casio_main.c:137:7: error: 'current_mode' undeclared (first use in this function)
+    if(current_mode >= 3) { //mode_Setting
+       ^~~~~~~~~~~~
+../src/Casio_main.c:137:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:198:3: error: 'current_mode' undeclared (first use in this function)
+   current_mode = Mode_Time;
+   ^~~~~~~~~~~~
+../src/Casio_main.c:231:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:73:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:264:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:308:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:73:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+17:22:30 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'BTN_Intr_Handler':
+../src/Casio_main.c:144:7: error: 'current_mode' undeclared (first use in this function)
+    if(current_mode >= 3) { //mode_Setting
+       ^~~~~~~~~~~~
+../src/Casio_main.c:144:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:198:3: error: 'current_mode' undeclared (first use in this function)
+   current_mode = Mode_Time;
+   ^~~~~~~~~~~~
+../src/Casio_main.c:231:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:264:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:308:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+17:24:11 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'BTN_Intr_Handler':
+../src/Casio_main.c:144:7: error: 'current_mode' undeclared (first use in this function)
+    if(current_mode >= 3) { //mode_Setting
+       ^~~~~~~~~~~~
+../src/Casio_main.c:144:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:198:3: error: 'current_mode' undeclared (first use in this function)
+   current_mode = Mode_Time;
+   ^~~~~~~~~~~~
+../src/Casio_main.c:231:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:264:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:308:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+17:24:23 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'BTN_Intr_Handler':
+../src/Casio_main.c:144:7: error: 'current_mode' undeclared (first use in this function)
+    if(current_mode >= Mode_Setting) { //mode_Setting
+       ^~~~~~~~~~~~
+../src/Casio_main.c:144:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:198:3: error: 'current_mode' undeclared (first use in this function)
+   current_mode = Mode_Time;
+   ^~~~~~~~~~~~
+../src/Casio_main.c:231:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:264:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:308:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+17:24:28 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'BTN_Intr_Handler':
+../src/Casio_main.c:144:7: error: 'current_mode' undeclared (first use in this function)
+    if(current_mode >= 3) { //mode_Setting
+       ^~~~~~~~~~~~
+../src/Casio_main.c:144:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:198:3: error: 'current_mode' undeclared (first use in this function)
+   current_mode = Mode_Time;
+   ^~~~~~~~~~~~
+../src/Casio_main.c:231:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:264:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:308:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+17:24:40 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'BTN_Intr_Handler':
+../src/Casio_main.c:144:7: error: 'current_mode' undeclared (first use in this function)
+    if(current_mode > 3) { //mode_Setting
+       ^~~~~~~~~~~~
+../src/Casio_main.c:144:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:198:3: error: 'current_mode' undeclared (first use in this function)
+   current_mode = Mode_Time;
+   ^~~~~~~~~~~~
+../src/Casio_main.c:231:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:264:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:308:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:80:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+21:06:22 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:233:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:82:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:259:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_Time){
+     ^~~~~~~~~~~~
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c:270:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_Alarm){
+     ^~~~~~~~~~~~
+../src/Casio_main.c:274:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_StopWatch){
+     ^~~~~~~~~~~~
+../src/Casio_main.c:278:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_Setting){
+     ^~~~~~~~~~~~
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:310:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:82:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+21:06:45 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:233:12: error: too many arguments to function 'IntcInitFunction'
+   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+            ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:82:5: note: declared here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c:270:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_Alarm){
+     ^~~~~~~~~~~~
+../src/Casio_main.c:274:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_StopWatch){
+     ^~~~~~~~~~~~
+../src/Casio_main.c:278:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(current_mode = Mode_Setting){
+     ^~~~~~~~~~~~
+../src/Casio_main.c: At top level:
+../src/Casio_main.c:310:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+     ^~~~~~~~~~~~~~~~
+../src/Casio_main.c:82:5: note: previous declaration of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/Casio_main.o] Error 1
+21:11:48 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:329:21: error: 'BTNInstancePtr' undeclared (first use in this function); did you mean 'TmrInstancePtr'?
+             (void *)BTNInstancePtr);
+                     ^~~~~~~~~~~~~~
+                     TmrInstancePtr
+../src/Casio_main.c:329:21: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c:336:21: error: 'SWSInstancePtr' undeclared (first use in this function); did you mean 'BTNInstancePtr'?
+             (void *)SWSInstancePtr);
+                     ^~~~~~~~~~~~~~
+                     BTNInstancePtr
+make: *** [src/Casio_main.o] Error 1
+21:12:09 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:348:24: error: 'BTNInstancePtr' undeclared (first use in this function); did you mean 'TmrInstancePtr'?
+  XGpio_InterruptEnable(BTNInstancePtr, 1);
+                        ^~~~~~~~~~~~~~
+                        TmrInstancePtr
+../src/Casio_main.c:348:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c:352:24: error: 'SWSInstancePtr' undeclared (first use in this function); did you mean 'BTNInstancePtr'?
+  XGpio_InterruptEnable(SWSInstancePtr, 1);
+                        ^~~~~~~~~~~~~~
+                        BTNInstancePtr
+make: *** [src/Casio_main.o] Error 1
+21:12:22 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:349:30: error: 'BTNInstancePtr' undeclared (first use in this function); did you mean 'TmrInstancePtr'?
+  XGpio_InterruptGlobalEnable(BTNInstancePtr);
+                              ^~~~~~~~~~~~~~
+                              TmrInstancePtr
+../src/Casio_main.c:349:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c:353:30: error: 'SWSInstancePtr' undeclared (first use in this function); did you mean 'BTNInstancePtr'?
+  XGpio_InterruptGlobalEnable(SWSInstancePtr);
+                              ^~~~~~~~~~~~~~
+                              BTNInstancePtr
+make: *** [src/Casio_main.o] Error 1
+21:12:39 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+'Finished building: ../src/Casio_main.c'
+' '
+'Building file: ../src/alarm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alarm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alarm.d" -MT"src/alarm.o" -o "src/alarm.o" "../src/alarm.c"
+'Finished building: ../src/alarm.c'
+' '
+'Building file: ../src/clock.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/clock.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/clock.d" -MT"src/clock.o" -o "src/clock.o" "../src/clock.c"
+'Finished building: ../src/clock.c'
+' '
+'Building file: ../src/setting.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/setting.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/setting.d" -MT"src/setting.o" -o "src/setting.o" "../src/setting.c"
+'Finished building: ../src/setting.c'
+' '
+'Building file: ../src/stopwatch.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stopwatch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stopwatch.d" -MT"src/stopwatch.o" -o "src/stopwatch.o" "../src/stopwatch.c"
+'Finished building: ../src/stopwatch.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:102: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:130: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:180: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:196: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:311: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:293: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:13:56 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:265:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:101: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:129: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:179: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:195: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:310: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:292: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:14:55 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:102: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:130: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:180: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:196: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:311: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:293: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:15:20 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'XTmrCtr_ClearInterruptFlag':
+../src/Casio_main.c:120:1: error: expected ';' before '}' token
+ }
+ ^
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+make: *** [src/Casio_main.o] Error 1
+21:15:24 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:102: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:130: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:180: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:196: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:311: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:293: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:17:20 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:180:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:258:28: error: 'INTC_TMR_INTERRPC_ID' undeclared (first use in this function); did you mean 'INTC_TMR_INTERRUPT_ID'?
+  XScuGic_Enable(&INTCInst, INTC_TMR_INTERRPC_ID); // eller INTC_TMR_INTERRUPT_ID
+                            ^~~~~~~~~~~~~~~~~~~~
+                            INTC_TMR_INTERRUPT_ID
+../src/Casio_main.c:258:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c:223:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/Casio_main.c:223:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+make: *** [src/Casio_main.o] Error 1
+21:17:34 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:266:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:102: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:130: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:180: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:196: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:311: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:293: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:19:30 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:180:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:258:28: error: 'INTC_TMR_INTERRPC_ID' undeclared (first use in this function); did you mean 'INTC_TMR_INTERRUPT_ID'?
+  XScuGic_Enable(&INTCInst, INTC_TMR_INTERRPC_ID); // eller INTC_TMR_INTERRUPT_ID
+                            ^~~~~~~~~~~~~~~~~~~~
+                            INTC_TMR_INTERRUPT_ID
+../src/Casio_main.c:258:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/Casio_main.c:223:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/Casio_main.c:223:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+make: *** [src/Casio_main.o] Error 1
+21:20:46 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:180:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:223:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/Casio_main.c:223:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:64: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:84: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:123: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:138: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:220: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:205: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:22:15 **** Clean-only build of configuration Debug for project casio_projekt ****
+make clean 
+rm -rf  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o  ./src/Casio_main.d ./src/alarm.d ./src/clock.d ./src/interrupt_counter_tut_2D_fixed.d ./src/platform.d ./src/setting.d ./src/stopwatch.d  casio_projekt.elf.size  casio_projekt.elf
+' '
+21:22:15 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:180:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:223:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/Casio_main.c:223:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building file: ../src/alarm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alarm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alarm.d" -MT"src/alarm.o" -o "src/alarm.o" "../src/alarm.c"
+'Finished building: ../src/alarm.c'
+' '
+'Building file: ../src/clock.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/clock.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/clock.d" -MT"src/clock.o" -o "src/clock.o" "../src/clock.c"
+'Finished building: ../src/clock.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/setting.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/setting.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/setting.d" -MT"src/setting.o" -o "src/setting.o" "../src/setting.c"
+'Finished building: ../src/setting.c'
+' '
+'Building file: ../src/stopwatch.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stopwatch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stopwatch.d" -MT"src/stopwatch.o" -o "src/stopwatch.o" "../src/stopwatch.c"
+'Finished building: ../src/stopwatch.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:22:21 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupt_counter_tut_2D_fixed.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt_counter_tut_2D_fixed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt_counter_tut_2D_fixed.d" -MT"src/interrupt_counter_tut_2D_fixed.o" -o "src/interrupt_counter_tut_2D_fixed.o" "../src/interrupt_counter_tut_2D_fixed.c"
+In file included from ../src/interrupt_counter_tut_2D_fixed.c:33:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/interrupt_counter_tut_2D_fixed.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/interrupt_counter_tut_2D_fixed.o: In function `XTmrCtr_ClearInterruptFlag':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:82: multiple definition of `XTmrCtr_ClearInterruptFlag'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:64: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `BTN_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:112: multiple definition of `BTN_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:84: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `TMR_Intr_Handler':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:132: multiple definition of `TMR_Intr_Handler'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:123: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `main':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:174: multiple definition of `main'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:138: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `IntcInitFunction':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:237: multiple definition of `IntcInitFunction'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:220: first defined here
+./src/interrupt_counter_tut_2D_fixed.o: In function `InterruptSystemSetup':
+C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/interrupt_counter_tut_2D_fixed.c:219: multiple definition of `InterruptSystemSetup'
+./src/Casio_main.o:C:\Users\Frede\Documents\Uni\HDSW\Casio_hw-sw\zynq_interrupts.xpr\zynq_interrupts\zynq_interrupts.sdk\casio_projekt\Debug/../src/Casio_main.c:205: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [casio_projekt.elf] Error 1
+21:23:50 **** Clean-only build of configuration Debug for project casio_projekt ****
+make clean 
+rm -rf  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/interrupt_counter_tut_2D_fixed.o ./src/platform.o ./src/setting.o ./src/stopwatch.o  ./src/Casio_main.d ./src/alarm.d ./src/clock.d ./src/interrupt_counter_tut_2D_fixed.d ./src/platform.d ./src/setting.d ./src/stopwatch.d  casio_projekt.elf.size  casio_projekt.elf
+' '
+21:23:50 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'main':
+../src/Casio_main.c:180:42: warning: implicit declaration of function 'Clock_GetHour'; did you mean 'Clock_GetMinutes'? [-Wimplicit-function-declaration]
+    xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+                                          ^~~~~~~~~~~~~
+                                          Clock_GetMinutes
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:223:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/Casio_main.c:223:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building file: ../src/alarm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/alarm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/alarm.d" -MT"src/alarm.o" -o "src/alarm.o" "../src/alarm.c"
+'Finished building: ../src/alarm.c'
+' '
+'Building file: ../src/clock.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/clock.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/clock.d" -MT"src/clock.o" -o "src/clock.o" "../src/clock.c"
+'Finished building: ../src/clock.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/setting.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/setting.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/setting.d" -MT"src/setting.o" -o "src/setting.o" "../src/setting.c"
+'Finished building: ../src/setting.c'
+' '
+'Building file: ../src/stopwatch.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stopwatch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stopwatch.d" -MT"src/stopwatch.o" -o "src/stopwatch.o" "../src/stopwatch.c"
+'Finished building: ../src/stopwatch.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:24:46 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/Casio_main.c: In function 'IntcInitFunction':
+../src/Casio_main.c:223:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/Casio_main.c:223:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building file: ../src/clock.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/clock.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/clock.d" -MT"src/clock.o" -o "src/clock.o" "../src/clock.c"
+'Finished building: ../src/clock.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:26:07 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:28:00 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:28:41 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:41:09 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:41:23 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33260	   2792	  22712	  58764	   e58c	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:41:37 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:42:26 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:43:54 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:45:05 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:45:29 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:45:33 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:47:33 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:47:39 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:54:32 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33232	   2792	  22712	  58736	   e570	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+21:54:40 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:55:14 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+22:01:25 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33168	   2792	  22712	  58672	   e530	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+22:02:35 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33156	   2792	  22712	  58660	   e524	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+22:02:43 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:04:19 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33192	   2808	  22712	  58712	   e558	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+22:04:24 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:04:48 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:05:15 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33192	   2808	  22712	  58712	   e558	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
+22:05:20 **** Incremental Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:09:14 **** Auto Build of configuration Debug for project casio_projekt ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Casio_main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Casio_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Casio_main.d" -MT"src/Casio_main.o" -o "src/Casio_main.o" "../src/Casio_main.c"
+In file included from ../src/Casio_main.c:18:0:
+../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/Casio_main.c'
+' '
+'Building target: casio_projekt.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../casio_projekt_bsp/ps7_cortexa9_0/lib -o "casio_projekt.elf"  ./src/Casio_main.o ./src/alarm.o ./src/clock.o ./src/platform.o ./src/setting.o ./src/stopwatch.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: casio_projekt.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size casio_projekt.elf  |tee "casio_projekt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33192	   2808	  22712	  58712	   e558	casio_projekt.elf
+'Finished building: casio_projekt.elf.size'
+' '
