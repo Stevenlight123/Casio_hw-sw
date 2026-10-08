@@ -146,7 +146,7 @@ void SWS_Intr_Handler(void *InstancePtr)
 		timerfactor = 50;
 	} else if(sws_value & 0x02){
 		timerfactor = 20;
-	} else if(sws_value < 0x01){
+	} else if(sws_value & 0x01){
 		timerfactor = 10;
 	} else {
 		timerfactor = 1;
@@ -285,10 +285,10 @@ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BtnInstancePt
 							 (void *)TmrInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-	XGpio_InterruptEnable(BtnInstancePtr, 1);
+	XGpio_InterruptEnable(BtnInstancePtr, BTN_INT);
 	XGpio_InterruptGlobalEnable(BtnInstancePtr);
 
-	XGpio_InterruptEnable(SwsInstancePtr, 1);
+	XGpio_InterruptEnable(SwsInstancePtr, SWS_INT);
 	XGpio_InterruptGlobalEnable(SwsInstancePtr);
 
 	XScuGic_Enable(&INTCInst, INTC_BTN_INTERRUPT_ID);
