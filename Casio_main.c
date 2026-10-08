@@ -23,13 +23,13 @@
 #define TMR_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
 #define BTNS_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
 #define LEDS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
-#define SWS_DEVICE_ID		XPAR_AXI_GPIO_2_DEVICE_ID
+#define SWS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
 #define INTC_BTN_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
 #define INTC_SWS_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
 #define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 
 #define BTN_INT 			XGPIO_IR_CH1_MASK
-#define SWS_INT 			XGPIO_IR_CH2_MASK
+#define SWS_INT 			XGPIO_IR_CH1_MASK
 #define TMR_LOAD 			1000000
 XTmrCtr TMRInst;
 
@@ -183,7 +183,7 @@ int main (void)
   status = XGpio_Initialize(&SWSInst, SWS_DEVICE_ID);
   if(status != XST_SUCCESS) return XST_FAILURE;
 
-  XGpio_SetDataDirection(&LEDInst, 1, 0x00);
+  XGpio_SetDataDirection(&LEDInst, 1, 0x01);
   XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
   XGpio_SetDataDirection(&SWSInst, 1, 0xFF);
 
@@ -211,6 +211,7 @@ int main (void)
 		}
 
 		if(current_mode == Mode_StopWatch){
+			xil_printf("%d", Clock_AllNb());
 			SW_Update();
 		}
 	}
