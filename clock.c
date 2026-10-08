@@ -31,6 +31,10 @@ void Clock_Update(void){
     } 
 }
 
+int Colck_GetMs(void){
+    return msCounter; 
+}
+
 int Clock_GetSeconds(void){
     return seconds;
 }

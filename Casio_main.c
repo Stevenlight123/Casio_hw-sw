@@ -1,11 +1,11 @@
 /*
- * interrupt_counter_tut_2B.c
+ * Casio
  *
- *  Version 1.2 Author : Edward Todirica
+ *  Version 1.0 Author : Ludvig og Frederik
  *
- *  Created on: 	Unknown
- *      Author: 	Ross Elliot
- *     Version:		1.1
+ *  Created from: 	zynq_interrupts by Edward
+ *        Author: 	Ludvig og Frederik
+ *     	 Version:	1.0
  */
 
 #include <stdio.h>
@@ -137,7 +137,6 @@ void BTN_Intr_Handler(void *InstancePtr)
 
 void SWS_Intr_Handler(void *InstancePtr)
 {
-	XTmrCtr* pTMRInst = (XTmrCtr *) InstancePtr;
 	XGpio_InterruptDisable(&SWSInst, SWS_INT);
 	sws_value = XGpio_DiscreteRead(&SWSInst, 1);
 
@@ -153,7 +152,6 @@ void SWS_Intr_Handler(void *InstancePtr)
 		timerfactor = 1;
 	}
 
-	XTmrCtr_SetResetValue(pTMRInst, 0, TMR_LOAD);
 	(void)XGpio_InterruptClear(&SWSInst, SWS_INT);
     XGpio_InterruptEnable(&SWSInst, SWS_INT);
 }
@@ -211,6 +209,10 @@ int main (void)
 		for(int i = 0; i < timerfactor; i++){
 			Clock_Update();
 		}
+
+		if(current_mode == Mode_StopWatch){
+			SW_Update();
+		}
 	}
 	
 	if(btn_changed) {
@@ -252,7 +254,7 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 	return XST_SUCCESS;
 }
 
-int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr)
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BtnInstancePtr, XGpio *SwsInstancePtr)
 {
 	XScuGic_Config *IntcConfig;
 	int status;
@@ -268,7 +270,7 @@ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstan
 	status = XScuGic_Connect(&INTCInst,
 					  	  	 INTC_BTN_INTERRUPT_ID,
 					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
-					  	  	 (void *)GpioBtnInstancePtr);
+					  	  	 (void *)BtnInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
 	status = XScuGic_Connect(&INTCInst,
@@ -283,8 +285,8 @@ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstan
 							 (void *)TmrInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-	XGpio_InterruptEnable(GpioBtnInstancePtr, 1);
-	XGpio_InterruptGlobalEnable(GpioBtnInstancePtr);
+	XGpio_InterruptEnable(BtnInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(BtnInstancePtr);
 
 	XGpio_InterruptEnable(SwsInstancePtr, 1);
 	XGpio_InterruptGlobalEnable(SwsInstancePtr);
