@@ -1,0 +1,42 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+LD_SRCS += \
+../src/lscript.ld 
+
+C_SRCS += \
+../src/Casio_main.c \
+../src/alarm.c \
+../src/clock.c \
+../src/platform.c \
+../src/setting.c \
+../src/stopwatch.c 
+
+OBJS += \
+./src/Casio_main.o \
+./src/alarm.o \
+./src/clock.o \
+./src/platform.o \
+./src/setting.o \
+./src/stopwatch.o 
+
+C_DEPS += \
+./src/Casio_main.d \
+./src/alarm.d \
+./src/clock.d \
+./src/platform.d \
+./src/setting.d \
+./src/stopwatch.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/%.o: ../src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 gcc compiler'
+	arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../casio_projekt_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

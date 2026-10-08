@@ -8,21 +8,6 @@
  *     Version:		1.1
  */
 
-/********************************************************************************************
-
-* VERSION HISTORY
-********************************************************************************************
-*   v1.2 - 10.11.2016
-*		Fixed some bugs regarding Timer Interrupts and adding some
-*       debug messages for the Timer Interrupt Handler
-*
-* 	v1.1 - 01/05/2015
-* 		Updated for Zybo ~ DN
-*
-*	v1.0 - Unknown
-*		First version created.
-*******************************************************************************************/
-
 #include <stdio.h>
 #include "xparameters.h"
 #include "xgpio.h"
@@ -43,26 +28,38 @@
 #define INTC_SWS_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
 #define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 
-
 #define BTN_INT 			XGPIO_IR_CH1_MASK
-
 #define SWS_INT 			XGPIO_IR_CH2_MASK
-
-//#define TMR_LOAD			0xF8000000, and set time to 0.01 sec.
-#define TMR_LOAD			1000000
+#define TMR_LOAD 			1000000
+XTmrCtr TMRInst;
 
 XGpio LEDInst, BTNInst, SWSInst;
 XScuGic INTCInst;
 
-//XTmrCtr TMRInst;
 int led_data;
 int btn_value;
 int sws_value;
+volatile int timerfactor = 1;
+volatile int btn_changed = 0;
 volatile int flag_10ms = 0;
 
-//static int tmr_count;
-
 XTime tStart, tEnd;
+
+typedef enum {
+	Mode_Time = 0,
+	Mode_Alarm = 1,
+	Mode_StopWatch = 2,
+	Mode_Setting = 3
+} watchMode;
+
+const char *modeNames[] = {
+    "Time",
+    "Alarm",
+    "StopWatch",
+    "Setting"
+};
+
+volatile watchMode current_mode = Mode_Time;
 
 //----------------------------------------------------
 // PROTOTYPE FUNCTIONS
@@ -70,25 +67,9 @@ XTime tStart, tEnd;
 void BTN_Intr_Handler(void *baseaddr_p);
 void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber);
 int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
-int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr);
 
 /*****************************************************************************/
-/**
-* This function should be part of the device driver for the timer device
-* Clears the interrupt flag of the specified timer counter of the device.
-* This is necessary to do in the interrupt routine after the interrupt was handled.
-*
-* @param	InstancePtr is a pointer to the XTmrCtr instance.
-* @param	TmrCtrNumber is the timer counter of the device to operate on.
-*		Each device may contain multiple timer counters. The timer
-*		number is a zero based number  with a range of
-*		0 - (XTC_DEVICE_TIMER_COUNT - 1).
-*
-* @return	None.
-*
-* @note		None.
-*
-******************************************************************************/
 void XTmrCtr_ClearInterruptFlag(XTmrCtr * InstancePtr, u8 TmrCtrNumber)
 {
 	u32 CounterControlReg;
@@ -97,73 +78,83 @@ void XTmrCtr_ClearInterruptFlag(XTmrCtr * InstancePtr, u8 TmrCtrNumber)
 	Xil_AssertVoid(TmrCtrNumber < XTC_DEVICE_TIMER_COUNT);
 	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-	/*
-	 * Read current contents of the CSR register so it won't be destroyed
-	 */
 	CounterControlReg = XTmrCtr_ReadReg(InstancePtr->BaseAddress,
 					       TmrCtrNumber, XTC_TCSR_OFFSET);
-	/*
-	 * Reset the interrupt flag
-	 */
+
 	XTmrCtr_WriteReg(InstancePtr->BaseAddress, TmrCtrNumber,
 			  XTC_TCSR_OFFSET,
 			  CounterControlReg | XTC_CSR_INT_OCCURED_MASK);
 }
 
-
-
 //----------------------------------------------------
 // INTERRUPT HANDLER FUNCTIONS
 //----------------------------------------------------
 
-
 void BTN_Intr_Handler(void *InstancePtr)
 {
-	// Disable GPIO interrupts
 	XGpio_InterruptDisable(&BTNInst, BTN_INT);
-	// Ignore additional button presses
-	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=
-			BTN_INT) {
-			return;
-		}
+
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT) {
+		XGpio_InterruptEnable(&BTNInst, BTN_INT);
+		return;
+	}
+
 	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 
 	switch (btn_value) {
 		case 1: 
-
         	break;
 		
 		case 4:
-			if(current_mode >= 3) { //mode_Setting
-            	current_mode = 0;   //mode_Time
+			if(current_mode >= Mode_Setting) {
+            	current_mode = Mode_Time;
         	} else {
-            	current_mode++;              
-        	}
+            	current_mode++;
+        	}	btn_changed = 1;
 			break;
 
 		case 8:
-
 			break;
 		
 		default:
 			break;
 	}
 
+	//LED show mode
+	if(current_mode == 0){
+		XGpio_DiscreteWrite(&LEDInst, 1, 0x08);
+	} else if(current_mode == 1){
+		XGpio_DiscreteWrite(&LEDInst, 1, 0x04);
+	} else if(current_mode == 2){
+		XGpio_DiscreteWrite(&LEDInst, 1, 0x02);
+	} else {
+		XGpio_DiscreteWrite(&LEDInst, 1, 0x01); 
+	}
+
     (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
-    
-	// Enable GPIO interrupts
     XGpio_InterruptEnable(&BTNInst, BTN_INT);
 }
 
-void SWS_Intr_Handler(void *InstancePtr){
-
-	// Disable GPIO interrupts
+void SWS_Intr_Handler(void *InstancePtr)
+{
+	XTmrCtr* pTMRInst = (XTmrCtr *) InstancePtr;
 	XGpio_InterruptDisable(&SWSInst, SWS_INT);
-
 	sws_value = XGpio_DiscreteRead(&SWSInst, 1);
 
+	if(sws_value & 0x08){
+		timerfactor = 60;
+	} else if(sws_value & 0x04){
+		timerfactor = 50;
+	} else if(sws_value & 0x02){
+		timerfactor = 20;
+	} else if(sws_value < 0x01){
+		timerfactor = 10;
+	} else {
+		timerfactor = 1;
+	}
+
+	XTmrCtr_SetResetValue(pTMRInst, 0, TMR_LOAD);
 	(void)XGpio_InterruptClear(&SWSInst, SWS_INT);
-	// Enable GPIO interrupts
     XGpio_InterruptEnable(&SWSInst, SWS_INT);
 }
 
@@ -178,48 +169,25 @@ void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber)
 	XTmrCtr_ClearInterruptFlag(pTMRInst, TmrCtrNumber);
 }
 
-typedef enum {
-	Mode_Time = 0,
-	Mode_Alarm = 1,
-	Mode_StopWatch = 2,
-	Mode_Setting = 3
-} watchMode; 
-
-
 //----------------------------------------------------
 // MAIN FUNCTION
 //----------------------------------------------------
 
 int main (void)
 {
-
   int status;
-  XTmrCtr TMRInst;
   current_mode = Mode_Time;
 
-  //----------------------------------------------------
-  // INITIALIZE THE PERIPHERALS & SET DIRECTIONS OF GPIO
-  //----------------------------------------------------
-  // Initialise LEDs
   status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
   if(status != XST_SUCCESS) return XST_FAILURE;
-  // Initialise Push Buttons
   status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
   if(status != XST_SUCCESS) return XST_FAILURE;
-  // Initialise switches
   status = XGpio_Initialize(&SWSInst, SWS_DEVICE_ID);
   if(status != XST_SUCCESS) return XST_FAILURE;
-  // Set LEDs direction to outputs
+
   XGpio_SetDataDirection(&LEDInst, 1, 0x00);
-  // Set all buttons direction to inputs
   XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
-  // Set sws to 0 for realtime speed
   XGpio_SetDataDirection(&SWSInst, 1, 0xFF);
-
-
-  //----------------------------------------------------
-  // SETUP THE TIMER
-  //----------------------------------------------------
 
   status = XTmrCtr_Initialize(&TMRInst, TMR_DEVICE_ID);
   if(status != XST_SUCCESS) return XST_FAILURE;
@@ -227,56 +195,38 @@ int main (void)
   XTmrCtr_SetResetValue(&TMRInst, 0, TMR_LOAD);
   XTmrCtr_SetOptions(&TMRInst, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION);
 
-  // Initialize interrupt controller
   status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
   if(status != XST_SUCCESS) return XST_FAILURE;
 
   XTmrCtr_Start(&TMRInst, 0);
-
-  //Here we get the time when the timer first started
   XTime_GetTime(&tStart);
 
   Clock_Init(); 
   static int last_seconds = -1;
   
-
-
-  //----------------------------------------------------
-  // Runtime!
-  //----------------------------------------------------
-  
-  while(1){
-	//timer 
-	if(flag_10ms == 1){
-		//updater uret med 10 millisekunder.
-		//reset flaget. 
+  while(1) {
+	if(flag_10ms == 1) {
 		flag_10ms = 0;
-		Clock_Update();
+
+		for(int i = 0; i < timerfactor; i++){
+			Clock_Update();
+		}
 	}
 	
-	if(current_mode = Mode_Time){
+	if(btn_changed) {
+				btn_changed = 0;
+				xil_printf("Ny mode valgt: %s\r\n", modeNames[current_mode]);
+			}
+
+
+	if(current_mode == Mode_Time) {
 		int current_sec = Clock_GetSeconds();
 
-		if(current_sec != last_seconds){
+		if(current_sec != last_seconds) {
 			last_seconds = current_sec;
-
-			//midlertidigt print for at se om det virker. 
 			xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
 		}
 	}
-
-	if(current_mode = Mode_Alarm){
-		xil_printf("Alarm\n");
-	}
-
-	if(current_mode = Mode_StopWatch){
-		xil_printf("StopWatch\n");
-	}
-
-	if(current_mode = Mode_Setting){
-		xil_printf("Setting\n");
-	}
-  	
 
   }
 
@@ -289,7 +239,6 @@ int main (void)
 
 int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 {
-	// Enable interrupt
 	XGpio_InterruptEnable(&BTNInst, BTN_INT);
 	XGpio_InterruptEnable(&SWSInst, SWS_INT);
 	XGpio_InterruptGlobalEnable(&BTNInst);
@@ -301,68 +250,48 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 	Xil_ExceptionEnable();
 
 	return XST_SUCCESS;
-
 }
 
-
-int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BTNInstancePtr, XGpio *SWSInstancePtr)
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr)
 {
 	XScuGic_Config *IntcConfig;
 	int status;
-	u8 pri, trig;
+	//u8 pri, trig;
 
-	// Interrupt controller initialisation
 	IntcConfig = XScuGic_LookupConfig(DeviceId);
 	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-	// Call to interrupt setup
 	status = InterruptSystemSetup(&INTCInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 	
-	// Connect BTN interrupt to handler
 	status = XScuGic_Connect(&INTCInst,
 					  	  	 INTC_BTN_INTERRUPT_ID,
 					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
-					  	  	 (void *)BTNInstancePtr);
+					  	  	 (void *)GpioBtnInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-	// Connect SWS interrupt to handler
 	status = XScuGic_Connect(&INTCInst,
 					  	  	 INTC_SWS_INTERRUPT_ID,
 					  	  	 (Xil_ExceptionHandler)SWS_Intr_Handler,
-					  	  	 (void *)SWSInstancePtr);
+					  	  	 (void *)SwsInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-	// Connect timer interrupt to handler
 	status = XScuGic_Connect(&INTCInst,
 							 INTC_TMR_INTERRUPT_ID,
-							// (Xil_ExceptionHandler)TMR_Intr_Handler,
 							 (Xil_ExceptionHandler) XTmrCtr_InterruptHandler,
 							 (void *)TmrInstancePtr);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-	// Enable BTN interrupts interrupt
-	XGpio_InterruptEnable(BTNInstancePtr, 1);
-	XGpio_InterruptGlobalEnable(BTNInstancePtr);
+	XGpio_InterruptEnable(GpioBtnInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(GpioBtnInstancePtr);
 
-	// Enable SWS interrupts interrupt
-	XGpio_InterruptEnable(SWSInstancePtr, 1);
-	XGpio_InterruptGlobalEnable(SWSInstancePtr);
+	XGpio_InterruptEnable(SwsInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(SwsInstancePtr);
 
-	// Enable BTN, SWS and timer interrupts in the controller
 	XScuGic_Enable(&INTCInst, INTC_BTN_INTERRUPT_ID);
 	XScuGic_Enable(&INTCInst, INTC_SWS_INTERRUPT_ID);
-	XScuGic_Enable(&INTCInst, INTC_TMR_INTERRUPT_ID);
-
-	xil_printf("Getting the Timer interrupt info\n\r");
-	XScuGic_GetPriTrigTypeByDistAddr(INTCInst.Config->DistBaseAddress, INTC_TMR_INTERRUPT_ID, &pri, &trig);
-	xil_printf("GPIO Interrupt-> Priority:%d, Trigger:%x\n\r", pri, trig);
-
-	
-	//Set the timer interrupt as edge triggered
-	//XScuGic_SetPriorityTriggerType(&INTCInst, INTC_TMR_INTERRUPT_ID, )
+	XScuGic_Enable(&INTCInst, INTC_TMR_INTERRUPT_ID); // eller INTC_TMR_INTERRUPT_ID
 
 	return XST_SUCCESS;
 }
-

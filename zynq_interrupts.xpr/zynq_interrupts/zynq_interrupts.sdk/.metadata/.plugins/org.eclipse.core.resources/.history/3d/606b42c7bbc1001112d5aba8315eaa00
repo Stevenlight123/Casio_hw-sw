@@ -1,0 +1,261 @@
+/*
+ * interrupt_counter_tut_2B.c
+ *
+ *  Version 1.2 Author : Edward Todirica
+ *
+ *  Created on: 	Unknown
+ *      Author: 	Ross Elliot
+ *     Version:		1.1
+ */
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xtmrctr.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+#include "xtime_l.h"
+#include "clock.h"
+
+// Parameter definitions
+#define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define TMR_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
+#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
+#define LEDS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+#define SWS_DEVICE_ID		XPAR_AXI_GPIO_2_DEVICE_ID
+#define INTC_BTN_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+#define INTC_SWS_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
+#define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+
+#define BTN_INT 			XGPIO_IR_CH1_MASK
+#define SWS_INT 			XGPIO_IR_CH2_MASK
+#define TMR_LOAD			1000000
+
+XGpio LEDInst, BTNInst, SWSInst;
+XScuGic INTCInst;
+
+int led_data;
+int btn_value;
+int sws_value;
+volatile int flag_10ms = 0;
+
+XTime tStart, tEnd;
+
+typedef enum {
+	Mode_Time = 0,
+	Mode_Alarm = 1,
+	Mode_StopWatch = 2,
+	Mode_Setting = 3
+} watchMode;
+
+watchMode current_mode = Mode_Time;
+
+//----------------------------------------------------
+// PROTOTYPE FUNCTIONS
+//----------------------------------------------------
+void BTN_Intr_Handler(void *baseaddr_p);
+void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber);
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr);
+
+/*****************************************************************************/
+void XTmrCtr_ClearInterruptFlag(XTmrCtr * InstancePtr, u8 TmrCtrNumber)
+{
+	u32 CounterControlReg;
+
+	Xil_AssertVoid(InstancePtr != NULL);
+	Xil_AssertVoid(TmrCtrNumber < XTC_DEVICE_TIMER_COUNT);
+	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+	CounterControlReg = XTmrCtr_ReadReg(InstancePtr->BaseAddress,
+					       TmrCtrNumber, XTC_TCSR_OFFSET);
+
+	XTmrCtr_WriteReg(InstancePtr->BaseAddress, TmrCtrNumber,
+			  XTC_TCSR_OFFSET,
+			  CounterControlReg | XTC_CSR_INT_OCCURED_MASK);
+}
+
+//----------------------------------------------------
+// INTERRUPT HANDLER FUNCTIONS
+//----------------------------------------------------
+
+void BTN_Intr_Handler(void *InstancePtr)
+{
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT) {
+		return;
+	}
+	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+
+	switch (btn_value) {
+		case 1: 
+        	break;
+		
+		case 4:
+			if(current_mode >= Mode_Setting) {
+            	current_mode = Mode_Time;
+        	} else {
+            	current_mode++;              
+        	}
+			break;
+
+		case 8:
+			break;
+		
+		default:
+			break;
+	}
+
+    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+    XGpio_InterruptEnable(&BTNInst, BTN_INT);
+}
+
+void SWS_Intr_Handler(void *InstancePtr)
+{
+	XGpio_InterruptDisable(&SWSInst, SWS_INT);
+	sws_value = XGpio_DiscreteRead(&SWSInst, 1);
+	(void)XGpio_InterruptClear(&SWSInst, SWS_INT);
+    XGpio_InterruptEnable(&SWSInst, SWS_INT);
+}
+
+void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber)
+{
+	XTmrCtr* pTMRInst = (XTmrCtr *) InstancePtr;
+
+	if(TmrCtrNumber == 0){
+		flag_10ms = 1;
+	}
+
+	XTmrCtr_ClearInterruptFlag(pTMRInst, TmrCtrNumber);
+}
+
+//----------------------------------------------------
+// MAIN FUNCTION
+//----------------------------------------------------
+
+int main (void)
+{
+  int status;
+  XTmrCtr TMRInst;
+  current_mode = Mode_Time;
+
+  status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
+  if(status != XST_SUCCESS) return XST_FAILURE;
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  if(status != XST_SUCCESS) return XST_FAILURE;
+  status = XGpio_Initialize(&SWSInst, SWS_DEVICE_ID);
+  if(status != XST_SUCCESS) return XST_FAILURE;
+
+  XGpio_SetDataDirection(&LEDInst, 1, 0x00);
+  XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+  XGpio_SetDataDirection(&SWSInst, 1, 0xFF);
+
+  status = XTmrCtr_Initialize(&TMRInst, TMR_DEVICE_ID);
+  if(status != XST_SUCCESS) return XST_FAILURE;
+  XTmrCtr_SetHandler(&TMRInst, TMR_Intr_Handler, &TMRInst);
+  XTmrCtr_SetResetValue(&TMRInst, 0, TMR_LOAD);
+  XTmrCtr_SetOptions(&TMRInst, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION);
+
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+  if(status != XST_SUCCESS) return XST_FAILURE;
+
+  XTmrCtr_Start(&TMRInst, 0);
+  XTime_GetTime(&tStart);
+
+  Clock_Init(); 
+  static int last_seconds = -1;
+  
+  while(1) {
+	if(flag_10ms == 1) {
+		flag_10ms = 0;
+		Clock_Update();
+	}
+	
+	if(current_mode == Mode_Time) {
+		int current_sec = Clock_GetSeconds();
+
+		if(current_sec != last_seconds) {
+			last_seconds = current_sec;
+			xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+		}
+	}
+
+	if(current_mode == Mode_Alarm) {
+		xil_printf("Alarm\n");
+	}
+
+	if(current_mode == Mode_StopWatch) {
+		xil_printf("StopWatch\n");
+	}
+
+	if(current_mode == Mode_Setting) {
+		xil_printf("Setting\n");
+	}
+  }
+
+  return 0;
+}
+
+//----------------------------------------------------
+// INITIAL SETUP FUNCTIONS
+//----------------------------------------------------
+
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+{
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+	XGpio_InterruptEnable(&SWSInst, SWS_INT);
+	XGpio_InterruptGlobalEnable(&BTNInst);
+	XGpio_InterruptGlobalEnable(&SWSInst);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			 	 	 	 	 	 XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr)
+{
+	XScuGic_Config *IntcConfig;
+	int status;
+	u8 pri, trig;
+
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	status = InterruptSystemSetup(&INTCInst);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+	
+	status = XScuGic_Connect(&INTCInst,
+					  	  	 INTC_BTN_INTERRUPT_ID,
+					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
+					  	  	 (void *)GpioBtnInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	status = XScuGic_Connect(&INTCInst,
+					  	  	 INTC_SWS_INTERRUPT_ID,
+					  	  	 (Xil_ExceptionHandler)SWS_Intr_Handler,
+					  	  	 (void *)SwsInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	status = XScuGic_Connect(&INTCInst,
+							 INTC_TMR_INTERRUPT_ID,
+							 (Xil_ExceptionHandler) XTmrCtr_InterruptHandler,
+							 (void *)TmrInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	XGpio_InterruptEnable(GpioBtnInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(GpioBtnInstancePtr);
+
+	XGpio_InterruptEnable(SwsInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(SwsInstancePtr);
+
+	XScuGic_Enable(&INTCInst, INTC_BTN_INTERRUPT_ID);
+	XScuGic_Enable(&INTCInst, INTC_SWS_INTERRUPT_ID);
+	XScuGic_Enable(&INTCInst, INTC_TMR_INTERRUPT_ID); // eller INTC_TMR_INTERRUPT_ID
+
+	return XST_SUCCESS;
+}

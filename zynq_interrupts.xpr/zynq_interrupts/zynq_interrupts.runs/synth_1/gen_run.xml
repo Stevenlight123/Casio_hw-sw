@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1791299618">
+  <File Type="PA-TCL" Name="Zynq_interrupt_system_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Zynq_interrupt_system_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Zynq_interrupt_system_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Zynq_interrupt_system_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="Zynq_interrupt_system_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Zynq_interrupt_system_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Zynq_interrupt_system_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Zynq_interrupt_system_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Zynq_interrupt_system_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/Zynq_interrupt_system/Zynq_interrupt_system.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/Zynq_interrupt_system.bd"/>
+        <Attr Name="ImportTime" Val="1790259040"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Zynq_interrupt_system/hdl/Zynq_interrupt_system_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/hdl/Zynq_interrupt_system_wrapper.vhd"/>
+        <Attr Name="ImportTime" Val="1790259044"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/archive_project_summary.txt"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Zynq_interrupt_system_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Zynq_interrupt_system_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zynq_interrupt_system_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zynq_interrupt_system_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zynq_interrupt_system_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zynq_interrupt_system_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zynq_interrupt_system_axi_gpio_0_0"/>
+</GenRun>
