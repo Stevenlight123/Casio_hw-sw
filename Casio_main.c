@@ -23,7 +23,7 @@
 #define TMR_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
 #define BTNS_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
 #define LEDS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
-#define SWS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+#define SWS_DEVICE_ID		XPAR_AXI_GPIO_2_DEVICE_ID
 #define INTC_BTN_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
 #define INTC_SWS_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
 #define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
@@ -42,6 +42,7 @@ int sws_value;
 volatile int timerfactor = 1;
 volatile int btn_changed = 0;
 volatile int flag_10ms = 0;
+volatile int StartStop_Bool = 0;
 
 XTime tStart, tEnd;
 
@@ -103,6 +104,9 @@ void BTN_Intr_Handler(void *InstancePtr)
 
 	switch (btn_value) {
 		case 1: 
+			if(current_mode == Mode_StopWatch){
+				StartStop_Bool = !StartStop_Bool;
+			}
         	break;
 		
 		case 4:
@@ -210,8 +214,7 @@ int main (void)
 			Clock_Update();
 		}
 
-		if(current_mode == Mode_StopWatch){
-			xil_printf("%d", Clock_AllNb());
+		if(current_mode == Mode_StopWatch && StartStop_Bool == 1){
 			SW_Update();
 		}
 	}
@@ -224,11 +227,21 @@ int main (void)
 
 	if(current_mode == Mode_Time) {
 		int current_sec = Clock_GetSeconds();
-
+		
+		//midlertidigt 
 		if(current_sec != last_seconds) {
 			last_seconds = current_sec;
 			xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
 		}
+	}
+
+	if(current_mode == Mode_Alarm){
+
+	}
+
+	if(current_mode == Mode_StopWatch){
+		xil_printf("%d", Clock_AllNb());
+
 	}
 
   }

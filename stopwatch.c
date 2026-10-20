@@ -22,7 +22,7 @@ void SW_Update(void){
     
     seconds = totalseconds % 60;
     minutes = (totalseconds / 60) % 60; 
-    hour = ((totalseconds / 60)/60) % 24;
+    hour = (totalseconds / 3600) % 24;
     }
 }
 

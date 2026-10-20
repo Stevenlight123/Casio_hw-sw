@@ -50,7 +50,7 @@ int Clock_GetHour(void){
 
 int Clock_AllNb(void){
     
-    sample = (hour*1000)+(minutes*10)+seconds;
+    sample = (hour*10000)+(minutes*100)+seconds;
 
     return sample;
 }
