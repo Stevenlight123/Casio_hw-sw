@@ -17,6 +17,7 @@
 #include "xil_printf.h"
 #include "xtime_l.h"
 #include "clock.h"
+#include "stopwatch.h"
 
 // Parameter definitions
 #define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
@@ -40,9 +41,12 @@ int led_data;
 int btn_value;
 int sws_value;
 volatile int timerfactor = 1;
+volatile int SW_Show = 1;
 volatile int btn_changed = 0;
 volatile int flag_10ms = 0;
 volatile int StartStop_Bool = 0;
+volatile int Print_Flag = 0; 
+volatile int Chance_setting = 0;
 
 XTime tStart, tEnd;
 
@@ -107,8 +111,19 @@ void BTN_Intr_Handler(void *InstancePtr)
 			if(current_mode == Mode_StopWatch){
 				StartStop_Bool = !StartStop_Bool;
 			}
+
+			if(current_mode == Mode_Setting){
+				if(Chance_setting == 0){
+					Clock_SetSeconds(); 
+				} else if (Chance_setting == 1){
+					Clock_SetMinutes();
+				} else {
+					Clock_SetHour();
+				}
+			}
+
         	break;
-		
+
 		case 4:
 			if(current_mode >= Mode_Setting) {
             	current_mode = Mode_Time;
@@ -118,6 +133,20 @@ void BTN_Intr_Handler(void *InstancePtr)
 			break;
 
 		case 8:
+			if(current_mode == Mode_StopWatch){
+				if(SW_Show == 0 && StartStop_Bool == 0){
+					Print_Flag = !Print_Flag;
+				}
+				if(SW_Show == 1 && StartStop_Bool == 0){
+					SW_Init();
+				}
+				SW_Show = !SW_Show;
+			}
+
+			if(current_mode == Mode_Setting){
+				Chance_setting = (Chance_setting + 1) % 3;
+			}
+
 			break;
 		
 		default:
@@ -205,6 +234,7 @@ int main (void)
 
   Clock_Init(); 
   static int last_seconds = -1;
+  static int last_ms = -1;
   
   while(1) {
 	if(flag_10ms == 1) {
@@ -240,8 +270,15 @@ int main (void)
 	}
 
 	if(current_mode == Mode_StopWatch){
-		xil_printf("%d", Clock_AllNb());
+		int current_ms = SW_GetMs();
+		
+		//midlertidigt 
+		if(current_ms != last_ms && SW_Show == 1 || Print_Flag == 1) {
+			if(Print_Flag == 1)Print_Flag = 0;
 
+			last_ms = current_ms;
+			xil_printf("Tid: %02d:%02d:%02d\r\n", SW_GetMinutes(), SW_GetSeconds(), SW_GetMs() / 10);
+		}
 	}
 
   }

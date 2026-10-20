@@ -1,17 +1,16 @@
 
-#include "stopwatch.h";
+#include "stopwatch.h"
 
-unsigned long totalseconds = 0;
+static int totalseconds = 0;
 static int msCounter = 0;
 static int seconds = 0;
 static int minutes = 0;
-static int hour = 0;
 
 void SW_Init(void){
+    totalseconds = 0;
     msCounter = 0;
     seconds = 0;
     minutes = 0;
-    hour = 0;
 }
 
 void SW_Update(void){
@@ -22,8 +21,11 @@ void SW_Update(void){
     
     seconds = totalseconds % 60;
     minutes = (totalseconds / 60) % 60; 
-    hour = (totalseconds / 3600) % 24;
     }
+}
+
+int SW_TotalTime(void){
+    return (minutes*10000) + (seconds*100)+ msCounter;
 }
 
 int SW_GetMs(void){
@@ -36,8 +38,4 @@ int SW_GetSeconds(void){
 
 int SW_GetMinutes(void){
     return minutes;
-}
-
-int SW_GetHour(void){
-    return hour;
 }

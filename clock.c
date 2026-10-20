@@ -32,6 +32,18 @@ void Clock_Update(void){
     } 
 }
 
+int Clock_SetSeconds(void){
+    return seconds++;
+}
+
+int Clock_SetMinutes(void){
+    return minutes++;
+}
+
+int Clock_SetHour(void){
+    return hour++;
+}
+
 int Colck_GetMsCounter(void){
     return msCounter; 
 }
