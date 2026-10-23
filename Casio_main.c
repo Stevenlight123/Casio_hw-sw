@@ -18,20 +18,21 @@
 #include "xtime_l.h"
 #include "clock.h"
 #include "stopwatch.h"
+#include "print.h"
 
 // Parameter definitions
-#define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
-#define TMR_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
-#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
-#define LEDS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
-#define SWS_DEVICE_ID		XPAR_AXI_GPIO_2_DEVICE_ID
+#define INTC_DEVICE_ID XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define TMR_DEVICE_ID XPAR_TMRCTR_0_DEVICE_ID
+#define BTNS_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define LEDS_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
+#define SWS_DEVICE_ID XPAR_AXI_GPIO_2_DEVICE_ID
 #define INTC_BTN_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
 #define INTC_SWS_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
 #define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 
-#define BTN_INT 			XGPIO_IR_CH1_MASK
-#define SWS_INT 			XGPIO_IR_CH1_MASK
-#define TMR_LOAD 			1000000
+#define BTN_INT XGPIO_IR_CH1_MASK
+#define SWS_INT XGPIO_IR_CH2_MASK
+#define TMR_LOAD 1000000
 XTmrCtr TMRInst;
 
 XGpio LEDInst, BTNInst, SWSInst;
@@ -45,12 +46,13 @@ volatile int SW_Show = 1;
 volatile int btn_changed = 0;
 volatile int flag_10ms = 0;
 volatile int StartStop_Bool = 0;
-volatile int Print_Flag = 0; 
+volatile int Print_Flag = 0;
 volatile int Chance_setting = 0;
 
 XTime tStart, tEnd;
 
-typedef enum {
+typedef enum
+{
 	Mode_Time = 0,
 	Mode_Alarm = 1,
 	Mode_StopWatch = 2,
@@ -58,11 +60,10 @@ typedef enum {
 } watchMode;
 
 const char *modeNames[] = {
-    "Time",
-    "Alarm",
-    "StopWatch",
-    "Setting"
-};
+	"Time",
+	"Alarm",
+	"StopWatch",
+	"Setting"};
 
 volatile watchMode current_mode = Mode_Time;
 
@@ -75,7 +76,7 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr);
 
 /*****************************************************************************/
-void XTmrCtr_ClearInterruptFlag(XTmrCtr * InstancePtr, u8 TmrCtrNumber)
+void XTmrCtr_ClearInterruptFlag(XTmrCtr *InstancePtr, u8 TmrCtrNumber)
 {
 	u32 CounterControlReg;
 
@@ -84,11 +85,11 @@ void XTmrCtr_ClearInterruptFlag(XTmrCtr * InstancePtr, u8 TmrCtrNumber)
 	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
 	CounterControlReg = XTmrCtr_ReadReg(InstancePtr->BaseAddress,
-					       TmrCtrNumber, XTC_TCSR_OFFSET);
+										TmrCtrNumber, XTC_TCSR_OFFSET);
 
 	XTmrCtr_WriteReg(InstancePtr->BaseAddress, TmrCtrNumber,
-			  XTC_TCSR_OFFSET,
-			  CounterControlReg | XTC_CSR_INT_OCCURED_MASK);
+					 XTC_TCSR_OFFSET,
+					 CounterControlReg | XTC_CSR_INT_OCCURED_MASK);
 }
 
 //----------------------------------------------------
@@ -99,73 +100,58 @@ void BTN_Intr_Handler(void *InstancePtr)
 {
 	XGpio_InterruptDisable(&BTNInst, BTN_INT);
 
-	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT) {
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT)
+	{
 		XGpio_InterruptEnable(&BTNInst, BTN_INT);
 		return;
 	}
 
 	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 
-	switch (btn_value) {
-		case 1: 
-			if(current_mode == Mode_StopWatch){
-				StartStop_Bool = !StartStop_Bool;
-			}
+	switch (btn_value)
+	{
+	case 1:
+		break;
 
-			if(current_mode == Mode_Setting){
-				if(Chance_setting == 0){
-					Clock_SetSeconds(); 
-				} else if (Chance_setting == 1){
-					Clock_SetMinutes();
-				} else {
-					Clock_SetHour();
-				}
-			}
+	case 4:
+		if (current_mode >= Mode_Setting)
+		{
+			current_mode = Mode_Time;
+		}
+		else
+		{
+			current_mode++;
+		}
+		btn_changed = 1;
+		break;
 
-        	break;
+	case 8:
+		break;
 
-		case 4:
-			if(current_mode >= Mode_Setting) {
-            	current_mode = Mode_Time;
-        	} else {
-            	current_mode++;
-        	}	btn_changed = 1;
-			break;
-
-		case 8:
-			if(current_mode == Mode_StopWatch){
-				if(SW_Show == 0 && StartStop_Bool == 0){
-					Print_Flag = !Print_Flag;
-				}
-				if(SW_Show == 1 && StartStop_Bool == 0){
-					SW_Init();
-				}
-				SW_Show = !SW_Show;
-			}
-
-			if(current_mode == Mode_Setting){
-				Chance_setting = (Chance_setting + 1) % 3;
-			}
-
-			break;
-		
-		default:
-			break;
+	default:
+		break;
 	}
 
-	//LED show mode
-	if(current_mode == 0){
+	// LED show mode
+	if (current_mode == 0)
+	{
 		XGpio_DiscreteWrite(&LEDInst, 1, 0x08);
-	} else if(current_mode == 1){
+	}
+	else if (current_mode == 1)
+	{
 		XGpio_DiscreteWrite(&LEDInst, 1, 0x04);
-	} else if(current_mode == 2){
+	}
+	else if (current_mode == 2)
+	{
 		XGpio_DiscreteWrite(&LEDInst, 1, 0x02);
-	} else {
-		XGpio_DiscreteWrite(&LEDInst, 1, 0x01); 
+	}
+	else
+	{
+		XGpio_DiscreteWrite(&LEDInst, 1, 0x01);
 	}
 
-    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
-    XGpio_InterruptEnable(&BTNInst, BTN_INT);
+	(void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
 }
 
 void SWS_Intr_Handler(void *InstancePtr)
@@ -173,27 +159,37 @@ void SWS_Intr_Handler(void *InstancePtr)
 	XGpio_InterruptDisable(&SWSInst, SWS_INT);
 	sws_value = XGpio_DiscreteRead(&SWSInst, 1);
 
-	if(sws_value & 0x08){
+	if (sws_value & 0x08)
+	{
 		timerfactor = 60;
-	} else if(sws_value & 0x04){
+	}
+	else if (sws_value & 0x04)
+	{
 		timerfactor = 50;
-	} else if(sws_value & 0x02){
+	}
+	else if (sws_value & 0x02)
+	{
 		timerfactor = 20;
-	} else if(sws_value & 0x01){
+	}
+	else if (sws_value < 0x01)
+	{
 		timerfactor = 10;
-	} else {
+	}
+	else
+	{
 		timerfactor = 1;
 	}
 
 	(void)XGpio_InterruptClear(&SWSInst, SWS_INT);
-    XGpio_InterruptEnable(&SWSInst, SWS_INT);
+	XGpio_InterruptEnable(&SWSInst, SWS_INT);
 }
 
 void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber)
 {
-	XTmrCtr* pTMRInst = (XTmrCtr *) InstancePtr;
+	XTmrCtr *pTMRInst = (XTmrCtr *)InstancePtr;
 
-	if(TmrCtrNumber == 0){
+	if (TmrCtrNumber == 0)
+	{
 		flag_10ms = 1;
 	}
 
@@ -204,86 +200,79 @@ void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber)
 // MAIN FUNCTION
 //----------------------------------------------------
 
-int main (void)
+int main(void)
 {
-  int status;
-  current_mode = Mode_Time;
+	int status;
+	current_mode = Mode_Time;
 
-  status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
-  if(status != XST_SUCCESS) return XST_FAILURE;
-  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
-  if(status != XST_SUCCESS) return XST_FAILURE;
-  status = XGpio_Initialize(&SWSInst, SWS_DEVICE_ID);
-  if(status != XST_SUCCESS) return XST_FAILURE;
+	status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
+	status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
+	status = XGpio_Initialize(&SWSInst, SWS_DEVICE_ID);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
-  XGpio_SetDataDirection(&LEDInst, 1, 0x01);
-  XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
-  XGpio_SetDataDirection(&SWSInst, 1, 0xFF);
+	XGpio_SetDataDirection(&LEDInst, 1, 0x00);
+	XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+	XGpio_SetDataDirection(&SWSInst, 1, 0xFF);
 
-  status = XTmrCtr_Initialize(&TMRInst, TMR_DEVICE_ID);
-  if(status != XST_SUCCESS) return XST_FAILURE;
-  XTmrCtr_SetHandler(&TMRInst, TMR_Intr_Handler, &TMRInst);
-  XTmrCtr_SetResetValue(&TMRInst, 0, TMR_LOAD);
-  XTmrCtr_SetOptions(&TMRInst, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION);
+	status = XTmrCtr_Initialize(&TMRInst, TMR_DEVICE_ID);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
+	XTmrCtr_SetHandler(&TMRInst, TMR_Intr_Handler, &TMRInst);
+	XTmrCtr_SetResetValue(&TMRInst, 0, TMR_LOAD);
+	XTmrCtr_SetOptions(&TMRInst, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION);
 
-  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
-  if(status != XST_SUCCESS) return XST_FAILURE;
+	status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst, &SWSInst);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
-  XTmrCtr_Start(&TMRInst, 0);
-  XTime_GetTime(&tStart);
+	XTmrCtr_Start(&TMRInst, 0);
+	XTime_GetTime(&tStart);
 
-  Clock_Init(); 
-  static int last_seconds = -1;
-  static int last_ms = -1;
-  
-  while(1) {
-	if(flag_10ms == 1) {
-		flag_10ms = 0;
+	Clock_Init();
+	Print_Init();
+	static int last_seconds = -1;
 
-		for(int i = 0; i < timerfactor; i++){
-			Clock_Update();
-		}
+	while (1)
+	{
+		if (flag_10ms == 1)
+		{
+			flag_10ms = 0;
 
-		if(current_mode == Mode_StopWatch && StartStop_Bool == 1){
-			SW_Update();
-		}
-	}
-	
-	if(btn_changed) {
-				btn_changed = 0;
-				xil_printf("Ny mode valgt: %s\r\n", modeNames[current_mode]);
+			for (int i = 0; i < timerfactor; i++)
+			{
+				Clock_Update();
 			}
 
+			if (current_mode == Mode_StopWatch)
+			{
+				SW_Update();
+			}
+		}
 
-	if(current_mode == Mode_Time) {
-		int current_sec = Clock_GetSeconds();
-		
-		//midlertidigt 
-		if(current_sec != last_seconds) {
-			last_seconds = current_sec;
-			xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+		if (btn_changed)
+		{
+			btn_changed = 0;
+			xil_printf("Ny mode valgt: %s\r\n", modeNames[current_mode]);
+		}
+
+		if (current_mode == Mode_Time)
+		{
+			int current_sec = Clock_GetSeconds();
+
+			if (current_sec != last_seconds)
+			{
+				last_seconds = current_sec;
+				Print_Clock();
+			}
 		}
 	}
 
-	if(current_mode == Mode_Alarm){
-
-	}
-
-	if(current_mode == Mode_StopWatch){
-		int current_ms = SW_GetMs();
-		
-		//midlertidigt 
-		if(current_ms != last_ms && SW_Show == 1 || Print_Flag == 1) {
-			if(Print_Flag == 1)Print_Flag = 0;
-
-			last_ms = current_ms;
-			xil_printf("Tid: %02d:%02d:%02d\r\n", SW_GetMinutes(), SW_GetSeconds(), SW_GetMs() / 10);
-		}
-	}
-
-  }
-
-  return 0;
+	return 0;
 }
 
 //----------------------------------------------------
@@ -298,8 +287,8 @@ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 	XGpio_InterruptGlobalEnable(&SWSInst);
 
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
-			 	 	 	 	 	 XScuGicInstancePtr);
+								 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+								 XScuGicInstancePtr);
 	Xil_ExceptionEnable();
 
 	return XST_SUCCESS;
@@ -309,32 +298,37 @@ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *BtnInstancePt
 {
 	XScuGic_Config *IntcConfig;
 	int status;
-	//u8 pri, trig;
+	// u8 pri, trig;
 
 	IntcConfig = XScuGic_LookupConfig(DeviceId);
 	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
-	if(status != XST_SUCCESS) return XST_FAILURE;
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
 	status = InterruptSystemSetup(&INTCInst);
-	if(status != XST_SUCCESS) return XST_FAILURE;
-	
-	status = XScuGic_Connect(&INTCInst,
-					  	  	 INTC_BTN_INTERRUPT_ID,
-					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
-					  	  	 (void *)BtnInstancePtr);
-	if(status != XST_SUCCESS) return XST_FAILURE;
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
 	status = XScuGic_Connect(&INTCInst,
-					  	  	 INTC_SWS_INTERRUPT_ID,
-					  	  	 (Xil_ExceptionHandler)SWS_Intr_Handler,
-					  	  	 (void *)SwsInstancePtr);
-	if(status != XST_SUCCESS) return XST_FAILURE;
+							 INTC_BTN_INTERRUPT_ID,
+							 (Xil_ExceptionHandler)BTN_Intr_Handler,
+							 (void *)BtnInstancePtr);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
+
+	status = XScuGic_Connect(&INTCInst,
+							 INTC_SWS_INTERRUPT_ID,
+							 (Xil_ExceptionHandler)SWS_Intr_Handler,
+							 (void *)SwsInstancePtr);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
 	status = XScuGic_Connect(&INTCInst,
 							 INTC_TMR_INTERRUPT_ID,
-							 (Xil_ExceptionHandler) XTmrCtr_InterruptHandler,
+							 (Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
 							 (void *)TmrInstancePtr);
-	if(status != XST_SUCCESS) return XST_FAILURE;
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
 
 	XGpio_InterruptEnable(BtnInstancePtr, BTN_INT);
 	XGpio_InterruptGlobalEnable(BtnInstancePtr);
