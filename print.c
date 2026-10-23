@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include "clock.h"
 #include "print.h"
+#include "stopwatch.h"
 
 #define ROW 7
 #define COL 5
@@ -341,5 +342,13 @@ void Print_Clock(void)
     char digits[8];
 
     sprintf(digits, "%02d:%02d%02d", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+    print_digit(digits);
+}
+
+void Print_Stopwatch(void)
+{
+    char digits[8];
+
+    sprintf(digits, "%02d:%02d%02d", SW_GetMinutes(), SW_GetSeconds(), SW_GetMs());
     print_digit(digits);
 }
