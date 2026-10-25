@@ -316,7 +316,7 @@ void print_digit(char digits[])
         }
         printf("\n");
     }
-    printf("\n");
+    printf("\r\n");
     return;
 }
 

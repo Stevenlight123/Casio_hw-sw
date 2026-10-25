@@ -33,19 +33,18 @@ void Clock_Update(void){
 }
 
 int Clock_SetSeconds(void){
-    return seconds++;
+    seconds = (seconds + 1) % 60;
+    return seconds;
 }
 
 int Clock_SetMinutes(void){
-    return minutes++;
+    minutes = (minutes + 1) % 60;
+    return minutes;
 }
 
 int Clock_SetHour(void){
-    return hour++;
-}
-
-int Colck_GetMsCounter(void){
-    return msCounter; 
+    hour = (hour + 1) % 24;
+    return hour;
 }
 
 int Clock_GetSeconds(void){

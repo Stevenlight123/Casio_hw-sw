@@ -31,7 +31,7 @@
 #define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 
 #define BTN_INT XGPIO_IR_CH1_MASK
-#define SWS_INT XGPIO_IR_CH2_MASK
+#define SWS_INT XGPIO_IR_CH1_MASK
 #define TMR_LOAD 1000000
 XTmrCtr TMRInst;
 
@@ -41,6 +41,7 @@ XScuGic INTCInst;
 int led_data;
 int btn_value;
 int sws_value;
+volatile unsigned int tick_count = 0;
 volatile int timerfactor = 1;
 volatile int SW_Show = 1;
 volatile int btn_changed = 0;
@@ -48,6 +49,9 @@ volatile int flag_10ms = 0;
 volatile int StartStop_Bool = 0;
 volatile int Print_Flag = 0;
 volatile int Chance_setting = 0;
+volatile int BtnA_Held = 0;
+volatile int BtnA_Ticks = 0;
+volatile int Print_Setting = 0;
 
 XTime tStart, tEnd;
 
@@ -68,10 +72,11 @@ const char *modeNames[] = {
 volatile watchMode current_mode = Mode_Time;
 
 //----------------------------------------------------
-// PROTOTYPE FUNCTIONS
+// FUNCTIONS
 //----------------------------------------------------
 void BTN_Intr_Handler(void *baseaddr_p);
 void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber);
+void Setting_Step(void);
 int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr);
 
@@ -106,6 +111,11 @@ void BTN_Intr_Handler(void *InstancePtr)
 
 	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 
+	BtnA_Held = (btn_value & 0x01) !=0;
+	if(!BtnA_Held){
+		BtnA_Ticks = 0;
+	}
+
 	switch (btn_value)
 	{
 	case 1:
@@ -114,13 +124,7 @@ void BTN_Intr_Handler(void *InstancePtr)
 			}
 
 			if(current_mode == Mode_Setting){
-				if(Chance_setting == 0){
-					Clock_SetSeconds(); 
-				} else if (Chance_setting == 1){
-					Clock_SetMinutes();
-				} else {
-					Clock_SetHour();
-				}
+				Setting_Step();
 			}
 		break;
 
@@ -135,17 +139,19 @@ void BTN_Intr_Handler(void *InstancePtr)
 
 	case 8:
 		if(current_mode == Mode_StopWatch){
-				if(SW_Show == 0 && StartStop_Bool == 0){
-					Print_Flag = !Print_Flag;
-				}
-				if(SW_Show == 1 && StartStop_Bool == 0){
+				if(StartStop_Bool){
+					SW_Show = !SW_Show;
+					if(SW_Show) Print_Flag = 1;
+				} else {
 					SW_Init();
+					SW_Show = 1;
+					Print_Flag = 1;
 				}
-				SW_Show = !SW_Show;
 			}
 
 			if(current_mode == Mode_Setting){
 				Chance_setting = (Chance_setting + 1) % 3;
+				Print_Setting = 1;
 			}
 
 			break;
@@ -187,13 +193,13 @@ void SWS_Intr_Handler(void *InstancePtr)
 	}
 	else if (sws_value & 0x04)
 	{
-		timerfactor = 50;
+		timerfactor = 30;
 	}
 	else if (sws_value & 0x02)
 	{
 		timerfactor = 20;
 	}
-	else if (sws_value < 0x01)
+	else if (sws_value & 0x01)
 	{
 		timerfactor = 10;
 	}
@@ -212,10 +218,28 @@ void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber)
 
 	if (TmrCtrNumber == 0)
 	{
-		flag_10ms = 1;
+		tick_count++;
 	}
 
 	XTmrCtr_ClearInterruptFlag(pTMRInst, TmrCtrNumber);
+}
+
+void Setting_Step(void){
+	if (Chance_setting == 0){
+		Clock_SetSeconds();
+	} else if(Chance_setting == 1){
+		Clock_SetMinutes();
+	} else {
+		Clock_SetHour();
+	}
+	Print_Setting = 1;
+}
+
+static void Redraw_Time(void)
+{
+	xil_printf("\033[H");
+	xil_printf("Mode: %-10s\r\n\r\n", modeNames[current_mode]);
+	Print_Clock();
 }
 
 //----------------------------------------------------
@@ -254,70 +278,86 @@ int main(void)
 	XTmrCtr_Start(&TMRInst, 0);
 	XTime_GetTime(&tStart);
 
+	static unsigned int handled_ticks = 0;
+	XGpio_DiscreteWrite(&LEDInst, 1, 0x08);
+
 	Clock_Init();
 	Print_Init();
 	static int last_seconds = -1;
   	static int last_ms = -1;
+	static int need_redraw = 1;
 
 	while (1)
 	{
-		if (flag_10ms == 1)
+		while (handled_ticks != tick_count)
 		{
-			flag_10ms = 0;
+			handled_ticks++;
 
-			for (int i = 0; i < timerfactor; i++)
-			{
-				Clock_Update();
+			if(current_mode != Mode_Setting){
+				for (int i = 0; i < timerfactor; i++) {
+					Clock_Update();
+				}
+			} else if(BtnA_Held) {
+				BtnA_Ticks++;
+				if(BtnA_Ticks >= 200 && (BtnA_Ticks - 200) % 10 == 0) {
+					Setting_Step(); 
+				}
 			}
 
 			if (current_mode == Mode_StopWatch && StartStop_Bool == 1)
 			{
 				SW_Update();
 			}
+
 		}
 
 		if (btn_changed)
 		{
 			btn_changed = 0;
-			xil_printf("Ny mode valgt: %s\r\n", modeNames[current_mode]);
+			xil_printf("\033[2J");
+			need_redraw = 1;
 		}
 
-		if (current_mode == Mode_Time)
-		{
-			int current_sec = Clock_GetSeconds();
-
-			if (current_sec != last_seconds)
-			{
-				last_seconds = current_sec;
-				Print_Clock();
-			}
-		}
 
 		if(current_mode == Mode_Time) {
 			int current_sec = Clock_GetSeconds();
 
-			//midlertidigt 
-			if(current_sec != last_seconds) {
+			if (current_sec != last_seconds || need_redraw)
+			{
 				last_seconds = current_sec;
-				xil_printf("Tid: %02d:%02d:%02d\r\n", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
+				need_redraw = 0;
+				Redraw_Time();
 			}
 		}
 
 		if(current_mode == Mode_Alarm){
-
+			if(need_redraw){
+				Redraw_Time();
+			}
 		}
 
 		if(current_mode == Mode_StopWatch){
 			int current_ms = SW_GetMs();
 
-			//midlertidigt 
-			if(current_ms != last_ms && SW_Show == 1 || Print_Flag == 1) {
-				if(Print_Flag == 1)Print_Flag = 0;
-
+			if(need_redraw || Print_Flag || (SW_Show && (current_ms / 50) != (last_ms/50))) {
+				
+				Print_Flag = 0;
 				last_ms = current_ms;
-				xil_printf("Tid: %02d:%02d:%02d\r\n", SW_GetMinutes(), SW_GetSeconds(), SW_GetMs() / 10);
+
+				xil_printf("\033[H");
+				xil_printf("Mode: %-10s\r\n\r\n", modeNames[current_mode]);
+				Print_Stopwatch();
 			}
 		}
+
+		if(current_mode == Mode_Setting){
+			if(need_redraw || Print_Setting){
+				Print_Setting = 0;
+				Redraw_Time();
+			}
+		}
+
+		need_redraw = 0;
 	}
 
 	return 0;
