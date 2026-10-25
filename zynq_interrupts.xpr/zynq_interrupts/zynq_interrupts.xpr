@@ -69,23 +69,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_xbar_0/Zynq_interrupt_system_xbar_0.xci">
-          <Proxy FileSetName="Zynq_interrupt_system_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_axi_gpio_2_0/Zynq_interrupt_system_axi_gpio_2_0.xci">
-          <Proxy FileSetName="Zynq_interrupt_system_axi_gpio_2_0"/>
+        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_axi_gpio_0_0/Zynq_interrupt_system_axi_gpio_0_0.xci">
+          <Proxy FileSetName="Zynq_interrupt_system_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_axi_gpio_1_0/Zynq_interrupt_system_axi_gpio_1_0.xci">
           <Proxy FileSetName="Zynq_interrupt_system_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_rst_ps7_0_100M_0/Zynq_interrupt_system_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="Zynq_interrupt_system_rst_ps7_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_xbar_0/Zynq_interrupt_system_xbar_0.xci">
+          <Proxy FileSetName="Zynq_interrupt_system_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_axi_timer_0_0/Zynq_interrupt_system_axi_timer_0_0.xci">
           <Proxy FileSetName="Zynq_interrupt_system_axi_timer_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_axi_gpio_0_0/Zynq_interrupt_system_axi_gpio_0_0.xci">
-          <Proxy FileSetName="Zynq_interrupt_system_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_axi_gpio_2_0/Zynq_interrupt_system_axi_gpio_2_0.xci">
+          <Proxy FileSetName="Zynq_interrupt_system_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Zynq_interrupt_system.bd" FileRelPathName="ip/Zynq_interrupt_system_rst_ps7_0_100M_0/Zynq_interrupt_system_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="Zynq_interrupt_system_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Zynq_interrupt_system/hdl/Zynq_interrupt_system_wrapper.vhd">

@@ -20,7 +20,8 @@ src/Casio_main.o src/Casio_main.o: ../src/Casio_main.c \
  ../../casio_projekt_bsp/ps7_cortexa9_0/include/xil_exception.h \
  ../../casio_projekt_bsp/ps7_cortexa9_0/include/xil_exception.h \
  ../../casio_projekt_bsp/ps7_cortexa9_0/include/xil_printf.h \
- ../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h ../src/clock.h
+ ../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h ../src/clock.h \
+ ../src/stopwatch.h ../src/print.h
 
 ../../casio_projekt_bsp/ps7_cortexa9_0/include/xparameters.h:
 
@@ -67,3 +68,7 @@ src/Casio_main.o src/Casio_main.o: ../src/Casio_main.c \
 ../../casio_projekt_bsp/ps7_cortexa9_0/include/xtime_l.h:
 
 ../src/clock.h:
+
+../src/stopwatch.h:
+
+../src/print.h:

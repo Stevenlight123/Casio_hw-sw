@@ -142,9 +142,11 @@ void BTN_Intr_Handler(void *InstancePtr)
 				if(StartStop_Bool){
 					SW_Show = !SW_Show;
 					if(SW_Show) Print_Flag = 1;
+				} else if (!SW_Show){
+					SW_Show = 1;
+					Print_Flag = 1;
 				} else {
 					SW_Init();
-					SW_Show = 1;
 					Print_Flag = 1;
 				}
 			}
@@ -237,9 +239,8 @@ void Setting_Step(void){
 
 static void Redraw_Time(void)
 {
-	xil_printf("\033[H");
-	xil_printf("Mode: %-10s\r\n\r\n", modeNames[current_mode]);
-	Print_Clock();
+	xil_printf("\033[H\033[?25l");
+	printf("Mode: %-10s\r\n\n", modeNames[current_mode]);
 }
 
 //----------------------------------------------------
@@ -327,12 +328,14 @@ int main(void)
 				last_seconds = current_sec;
 				need_redraw = 0;
 				Redraw_Time();
+				Print_Clock();
 			}
 		}
 
 		if(current_mode == Mode_Alarm){
 			if(need_redraw){
 				Redraw_Time();
+				Print_Clock();
 			}
 		}
 
@@ -344,8 +347,7 @@ int main(void)
 				Print_Flag = 0;
 				last_ms = current_ms;
 
-				xil_printf("\033[H");
-				xil_printf("Mode: %-10s\r\n\r\n", modeNames[current_mode]);
+				Redraw_Time();
 				Print_Stopwatch();
 			}
 		}
@@ -354,6 +356,7 @@ int main(void)
 			if(need_redraw || Print_Setting){
 				Print_Setting = 0;
 				Redraw_Time();
+				Print_Clock();
 			}
 		}
 

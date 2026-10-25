@@ -4,6 +4,7 @@ static int msCounter = 0;
 static int seconds = 0;
 static int minutes = 0;
 static int hour = 0;
+static int sample = 0; 
 
 void Clock_Init(void){
     msCounter = 0;
@@ -31,6 +32,21 @@ void Clock_Update(void){
     } 
 }
 
+int Clock_SetSeconds(void){
+    seconds = (seconds + 1) % 60;
+    return seconds;
+}
+
+int Clock_SetMinutes(void){
+    minutes = (minutes + 1) % 60;
+    return minutes;
+}
+
+int Clock_SetHour(void){
+    hour = (hour + 1) % 24;
+    return hour;
+}
+
 int Clock_GetSeconds(void){
     return seconds;
 }
@@ -41,4 +57,11 @@ int Clock_GetMinutes(void){
 
 int Clock_GetHour(void){
     return hour;
+}
+
+int Clock_AllNb(void){
+    
+    sample = (hour*10000)+(minutes*100)+seconds;
+
+    return sample;
 }

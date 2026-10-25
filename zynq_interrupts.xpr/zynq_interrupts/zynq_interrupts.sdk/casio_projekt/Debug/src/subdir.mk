@@ -10,7 +10,7 @@ C_SRCS += \
 ../src/Casio_main.c \
 ../src/alarm.c \
 ../src/clock.c \
-../src/platform.c \
+../src/print.c \
 ../src/setting.c \
 ../src/stopwatch.c 
 
@@ -18,7 +18,7 @@ OBJS += \
 ./src/Casio_main.o \
 ./src/alarm.o \
 ./src/clock.o \
-./src/platform.o \
+./src/print.o \
 ./src/setting.o \
 ./src/stopwatch.o 
 
@@ -26,7 +26,7 @@ C_DEPS += \
 ./src/Casio_main.d \
 ./src/alarm.d \
 ./src/clock.d \
-./src/platform.d \
+./src/print.d \
 ./src/setting.d \
 ./src/stopwatch.d 
 

@@ -316,7 +316,7 @@ void print_digit(char digits[])
         }
         printf("\n");
     }
-    printf("\r\n");
+    printf("\n");
     return;
 }
 
@@ -334,12 +334,13 @@ void Print_Cleanup(void)
 
 void Print_Init(void)
 {
+	xil_printf("\033[2J\033[H\033[?25l");
     printAsciiDigit();
 }
 
 void Print_Clock(void)
 {
-    char digits[8];
+    char digits[16];
 
     sprintf(digits, "%02d:%02d%02d", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
     print_digit(digits);
@@ -347,8 +348,8 @@ void Print_Clock(void)
 
 void Print_Stopwatch(void)
 {
-    char digits[8];
+    char digits[16];
 
-    sprintf(digits, "%02d:%02d%02d", SW_GetMinutes(), SW_GetSeconds(), SW_GetMs());
+    sprintf(digits, "%02d:%02d%02d", SW_GetMinutes(), SW_GetSeconds(), SW_GetMs() / 10);
     print_digit(digits);
 }

@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Oct  6 17:13:57 2026
-# Process ID: 19616
+# Start of session at: Sun Oct 25 15:39:09 2026
+# Process ID: 19008
 # Current directory: C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1
 # Command line: vivado.exe -log Zynq_interrupt_system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_interrupt_system_wrapper.tcl
 # Log file: C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/Zynq_interrupt_system_wrapper.vds
@@ -18,23 +18,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22120 
+INFO: Helper process launched with PID 19816 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 388.078 ; gain = 100.676
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 389.273 ; gain = 100.801
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_wrapper' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/hdl/Zynq_interrupt_system_wrapper.vhd:43]
 INFO: [Synth 8-3491] module 'Zynq_interrupt_system' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:1937' bound to instance 'Zynq_interrupt_system_i' of component 'Zynq_interrupt_system' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/hdl/Zynq_interrupt_system_wrapper.vhd:73]
 INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:1970]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_gpio_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'Zynq_interrupt_system_axi_gpio_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2361]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_gpio_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_gpio_1_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'Zynq_interrupt_system_axi_gpio_1_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2385]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_gpio_1_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_1_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_gpio_2_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_2_0_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'Zynq_interrupt_system_axi_gpio_2_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2408]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_gpio_2_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_2_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_timer_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'Zynq_interrupt_system_axi_timer_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2432]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_timer_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_axi_timer_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_processing_system7_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Zynq_interrupt_system_processing_system7_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2461]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_processing_system7_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_processing_system7_0_0_stub.vhdl:81]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_gpio_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'Zynq_interrupt_system_axi_gpio_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2361]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_gpio_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_gpio_1_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'Zynq_interrupt_system_axi_gpio_1_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2385]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_gpio_1_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_gpio_2_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_2_0_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'Zynq_interrupt_system_axi_gpio_2_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2408]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_gpio_2_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_gpio_2_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_axi_timer_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'Zynq_interrupt_system_axi_timer_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2432]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_axi_timer_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_axi_timer_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_processing_system7_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Zynq_interrupt_system_processing_system7_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2461]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_processing_system7_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_processing_system7_0_0_stub.vhdl:81]
 INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_ps7_0_axi_periph_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:987]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1TY28Y2' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1TY28Y2' (1#1) [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:57]
@@ -47,16 +47,16 @@ INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1YMB73T' (4#1) [C
 INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_1NFL2TQ' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:465]
 INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_1NFL2TQ' (5#1) [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:465]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1U832IZ' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:595]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_auto_pc_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Zynq_interrupt_system_auto_pc_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:778]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_auto_pc_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_auto_pc_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Zynq_interrupt_system_auto_pc_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:778]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_auto_pc_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1U832IZ' (6#1) [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:595]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_xbar_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Zynq_interrupt_system_xbar_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:1786]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_xbar_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_xbar_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Zynq_interrupt_system_xbar_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:1786]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_xbar_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'Zynq_interrupt_system_ps7_0_axi_periph_0' (7#1) [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:987]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_rst_ps7_0_100M_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'Zynq_interrupt_system_rst_ps7_0_100M_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2674]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_rst_ps7_0_100M_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Zynq_interrupt_system_xlconcat_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_xlconcat_0_0_stub.vhdl:5' bound to instance 'xlconcat_0' of component 'Zynq_interrupt_system_xlconcat_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2687]
-INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_xlconcat_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19616-Frederiks-PC/realtime/Zynq_interrupt_system_xlconcat_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_rst_ps7_0_100M_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'Zynq_interrupt_system_rst_ps7_0_100M_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2674]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_rst_ps7_0_100M_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Zynq_interrupt_system_xlconcat_0_0' declared at 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_xlconcat_0_0_stub.vhdl:5' bound to instance 'xlconcat_0' of component 'Zynq_interrupt_system_xlconcat_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:2687]
+INFO: [Synth 8-638] synthesizing module 'Zynq_interrupt_system_xlconcat_0_0' [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/.Xil/Vivado-19008-Frederiks-PC/realtime/Zynq_interrupt_system_xlconcat_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'Zynq_interrupt_system' (8#1) [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/synth/Zynq_interrupt_system.vhd:1970]
 INFO: [Synth 8-256] done synthesizing module 'Zynq_interrupt_system_wrapper' (9#1) [C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.srcs/sources_1/bd/Zynq_interrupt_system/hdl/Zynq_interrupt_system_wrapper.vhd:43]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1U832IZ has unconnected port M_ACLK
@@ -115,7 +115,7 @@ WARNING: [Synth 8-3331] design Zynq_interrupt_system_ps7_0_axi_periph_0 has unco
 WARNING: [Synth 8-3331] design Zynq_interrupt_system_ps7_0_axi_periph_0 has unconnected port M04_AXI_rdata[1]
 WARNING: [Synth 8-3331] design Zynq_interrupt_system_ps7_0_axi_periph_0 has unconnected port M04_AXI_rresp[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.113 ; gain = 157.711
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 446.473 ; gain = 158.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -128,10 +128,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.113 ; gain = 157.711
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 446.473 ; gain = 158.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.113 ; gain = 157.711
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 446.473 ; gain = 158.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -163,16 +163,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 721.902 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 722.312 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 721.902 ; gain = 434.500
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 722.312 ; gain = 433.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 721.902 ; gain = 434.500
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 722.312 ; gain = 433.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -449,10 +449,10 @@ Applied set_property DONT_TOUCH = true for Zynq_interrupt_system_i/xlconcat_0. (
 Applied set_property DONT_TOUCH = true for Zynq_interrupt_system_i/axi_gpio_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Zynq_interrupt_system_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 721.902 ; gain = 434.500
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 722.312 ; gain = 433.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 721.902 ; gain = 434.500
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 722.312 ; gain = 433.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -531,7 +531,7 @@ WARNING: [Synth 8-3331] design Zynq_interrupt_system_ps7_0_axi_periph_0 has unco
 WARNING: [Synth 8-3331] design Zynq_interrupt_system_ps7_0_axi_periph_0 has unconnected port M04_AXI_rdata[1]
 WARNING: [Synth 8-3331] design Zynq_interrupt_system_ps7_0_axi_periph_0 has unconnected port M04_AXI_rresp[1]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 721.902 ; gain = 434.500
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 722.312 ; gain = 433.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -545,13 +545,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Zynq_interrupt_system_i/processing_system7_0/FCLK_CLK0' to pin 'Zynq_interrupt_system_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 757.215 ; gain = 469.812
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 753.426 ; gain = 464.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 757.434 ; gain = 470.031
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 753.574 ; gain = 465.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -563,7 +563,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 758.023 ; gain = 470.621
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 754.438 ; gain = 465.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -587,7 +587,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -600,7 +600,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -612,25 +612,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -678,11 +678,11 @@ Report Instance Areas:
 |4     |      s00_couplers        |s00_couplers_imp_1U832IZ                 |   177|
 +------+--------------------------+-----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 758.590 ; gain = 194.398
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 758.590 ; gain = 471.188
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 755.094 ; gain = 190.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 755.094 ; gain = 466.621
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -694,9 +694,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 53 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 779.906 ; gain = 499.398
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 773.117 ; gain = 491.574
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Frede/Documents/Uni/HDSW/Casio_hw-sw/zynq_interrupts.xpr/zynq_interrupts/zynq_interrupts.runs/synth_1/Zynq_interrupt_system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Zynq_interrupt_system_wrapper_utilization_synth.rpt -pb Zynq_interrupt_system_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 779.906 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct  6 17:14:34 2026...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 773.117 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 15:39:40 2026...
