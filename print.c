@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include "xil_printf.h"
 #include "clock.h"
+#include "alarm.h"
 #include "print.h"
 #include "stopwatch.h"
 
@@ -350,6 +351,24 @@ void Print_Clock(void)
 
     sprintf(digits, "%02d:%02d%02d", Clock_GetHour(), Clock_GetMinutes(), Clock_GetSeconds());
     print_digit(digits);
+}
+
+void Print_Alarm(void)
+{
+    char digits[16];
+    const char *settingNames[] = {"Hour", "Minutes", "On/Off"};
+
+    sprintf(digits, "%02d:%02d", Alarm_GetHour(), Alarm_GetMinutes());
+    for (int i = 0; i < ROW; i++)
+    {
+        for (int j = 0; j < strlen(digits); j++)
+        {
+            printf("%s ", bigChars[digits[j] - '0'].line[i]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    xil_printf("Alarm: %-3s   Set: %-7s\r\n", Alarm_GetEnabled() ? "ON" : "OFF", settingNames[Alarm_GetSetting()]);
 }
 
 void Print_Stopwatch(void)

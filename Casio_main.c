@@ -18,6 +18,7 @@
 #include "xtime_l.h"
 #include "clock.h"
 #include "stopwatch.h"
+#include "alarm.h"
 #include "print.h"
 
 // Parameter definitions
@@ -77,6 +78,7 @@ volatile watchMode current_mode = Mode_Time;
 void BTN_Intr_Handler(void *baseaddr_p);
 void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber);
 void Setting_Step(void);
+void Show_Mode_LED(void);
 int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
 int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioBtnInstancePtr, XGpio *SwsInstancePtr);
 
@@ -118,21 +120,41 @@ void BTN_Intr_Handler(void *InstancePtr)
 		BtnA_Ticks = 0;
 	}
 
+	// Any button stops a ringing alarm without doing its normal action
+	if (Alarm_IsRinging() && btn_value != 0)
+	{
+		Alarm_Stop();
+		btn_value = 0;
+	}
+
 	switch (btn_value)
 	{
 	case 1:
+		// A
 		if (current_mode == Mode_StopWatch)
 		{
 			StartStop_Bool = !StartStop_Bool;
+
+			if (!StartStop_Bool && SW_Show)
+			{
+				Print_Flag = 1;
+			}
 		}
 
 		if (current_mode == Mode_Setting)
 		{
 			Setting_Step();
 		}
+
+		if (current_mode == Mode_Alarm)
+		{
+			Alarm_AppendOne();
+			Print_Flag = 1;
+		}
 		break;
 
 	case 4:
+		// C
 		if (current_mode >= Mode_Setting)
 		{
 			current_mode = Mode_Time;
@@ -172,13 +194,26 @@ void BTN_Intr_Handler(void *InstancePtr)
 			Print_Setting = 1;
 		}
 
+		if (current_mode == Mode_Alarm)
+		{
+			Alarm_Advance();
+			Print_Flag = 1;
+		}
 		break;
 
 	default:
 		break;
 	}
 
-	// LED show mode
+	Show_Mode_LED();
+
+	(void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+}
+
+// LED show mode
+void Show_Mode_LED(void)
+{
 	if (current_mode == 0)
 	{
 		XGpio_DiscreteWrite(&LEDInst, 1, 0x08);
@@ -195,9 +230,6 @@ void BTN_Intr_Handler(void *InstancePtr)
 	{
 		XGpio_DiscreteWrite(&LEDInst, 1, 0x01);
 	}
-
-	(void)XGpio_InterruptClear(&BTNInst, BTN_INT);
-	XGpio_InterruptEnable(&BTNInst, BTN_INT);
 }
 
 void SWS_Intr_Handler(void *InstancePtr)
@@ -311,6 +343,7 @@ int main(void)
 	static int last_seconds = -1;
 	static int last_ms = -1;
 	static int need_redraw = 1;
+	static bool alarm_was_ringing = false;
 
 	while (1)
 	{
@@ -323,6 +356,7 @@ int main(void)
 				for (int i = 0; i < timerfactor; i++)
 				{
 					Clock_Update();
+					Alarm_Update();
 				}
 			}
 			else if (BtnA_Held)
@@ -338,6 +372,17 @@ int main(void)
 			{
 				SW_Update();
 			}
+		}
+
+				if (Alarm_IsRinging())
+		{
+			XGpio_DiscreteWrite(&LEDInst, 1, (handled_ticks / 50) % 2 ? 0x0F : 0x00);
+			alarm_was_ringing = true;
+		}
+		else if (alarm_was_ringing)
+		{
+			alarm_was_ringing = false;
+			Show_Mode_LED();
 		}
 
 		if (btn_changed)
@@ -363,10 +408,11 @@ int main(void)
 
 		if (current_mode == Mode_Alarm)
 		{
-			if (need_redraw)
+			if (need_redraw || Print_Flag)
 			{
+				Print_Flag = 0;
 				Redraw_Time();
-				Print_Clock();
+				Print_Alarm();
 			}
 		}
 
