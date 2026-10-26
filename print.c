@@ -341,7 +341,7 @@ void Print_Init(void)
 
 void Print_Date(void)
 {
-    xil_printf("%s %02d/%02d/%04d\n", Clock_GetDay(), Clock_GetDayOfMonth(), Clock_GetMonth(), Clock_GetYear());
+    xil_printf("%s %02d/%02d/%04d\r\n", Clock_GetDay(), Clock_GetDayOfMonth(), Clock_GetMonth(), Clock_GetYear());
 }
 
 void Print_Clock(void)
