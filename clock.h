@@ -10,5 +10,7 @@ int Clock_AllNb(void);
 int Clock_SetSeconds(void);
 int Clock_SetMinutes(void);
 int Clock_SetHour(void);
+time_t Clock_GetDate(void);
+int Clock_GetDay(void);
 
 #endif

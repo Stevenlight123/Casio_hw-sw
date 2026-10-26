@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include <time.h>
 #include "clock.h"
 #include "print.h"
 #include "stopwatch.h"
@@ -334,8 +335,15 @@ void Print_Cleanup(void)
 
 void Print_Init(void)
 {
-	xil_printf("\033[2J\033[H\033[?25l");
+    xil_printf("\033[2J\033[H\033[?25l");
     printAsciiDigit();
+}
+
+void Print_Date(void)
+{
+    char buffer[16];
+    time_t currentTime = Clock_GetDate();
+    xil_printf("%s\n", ctime(&currentTime));
 }
 
 void Print_Clock(void)
