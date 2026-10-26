@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdbool.h>
-#include <time.h>
+#include "xil_printf.h"
 #include "clock.h"
 #include "print.h"
 #include "stopwatch.h"
@@ -341,9 +341,7 @@ void Print_Init(void)
 
 void Print_Date(void)
 {
-    char buffer[16];
-    time_t currentTime = Clock_GetDate();
-    xil_printf("%s\n", ctime(&currentTime));
+    xil_printf("%s %02d/%02d/%04d\n", Clock_GetDay(), Clock_GetDayOfMonth(), Clock_GetMonth(), Clock_GetYear());
 }
 
 void Print_Clock(void)

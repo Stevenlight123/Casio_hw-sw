@@ -1,17 +1,43 @@
 #include "clock.h"
-#include <time.h>
-#define MS_FIRST_JAN_2026 1767225600000
-#define MS_IN_ONE_DAY 86400000
 
 static int msCounter = 0;
 static int seconds = 0;
 static int minutes = 0;
 static int hour = 0;
-static int day = 0;
+static int day = 1;
 static int month = 1;
 static int year = 2026;
+static int weekday = 0;
 static int sample = 0;
 static char *daysOfWeek[] = {"Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"};
+static const int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+static int Clock_DaysInMonth(void)
+{
+    bool leapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+
+    if (month == 2 && leapYear)
+    {
+        return 29;
+    }
+    return daysInMonth[month - 1];
+}
+
+static void Clock_NextDay(void)
+{
+    weekday = (weekday + 1) % 7;
+    day++;
+    if (day > Clock_DaysInMonth())
+    {
+        day = 1;
+        month++;
+        if (month > 12)
+        {
+            month = 1;
+            year++;
+        }
+    }
+}
 
 void Clock_Init(void)
 {
@@ -39,7 +65,7 @@ void Clock_Update(void)
                 if (hour >= 24)
                 {
                     hour = 0;
-                    day++;
+                    Clock_NextDay();
                 }
             }
         }
@@ -81,13 +107,22 @@ int Clock_GetHour(void)
 
 char *Clock_GetDay(void)
 {
-    return daysOfWeek[day % 7];
+    return daysOfWeek[weekday];
 }
 
-time_t Clock_GetDate(void)
+int Clock_GetDayOfMonth(void)
 {
-    time_t currentTime;
-    return time(&currentTime);
+    return day;
+}
+
+int Clock_GetMonth(void)
+{
+    return month;
+}
+
+int Clock_GetYear(void)
+{
+    return year;
 }
 
 int Clock_AllNb(void)
